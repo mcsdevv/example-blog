@@ -27,6 +27,7 @@ const EMAIL_REGEX = new RegExp(
 
 const ContactPage = () => {
   const onSubmit = (data) => {
+    alert('Thank you for your submission!')
     console.info(data)
     return true
   }
@@ -39,11 +40,7 @@ const ContactPage = () => {
           our reviews? Send us a message!
         </p>
 
-        <Form
-          onSubmit={onSubmit}
-          className="mt-8 max-w-lg mx-auto"
-          netlify="true"
-        >
+        <Form onSubmit={onSubmit} className="mt-8 max-w-lg mx-auto">
           <Label
             name="name"
             className={CSS.label}

@@ -1,6 +1,6 @@
 import { UserInputError } from '@redwoodjs/api'
+
 import { db } from 'src/lib/db'
-import { requireAuth } from 'src/lib/auth'
 
 const validate = (input) => {
   if (input.slug && !input.slug.match(/^\S+$/)) {
@@ -65,33 +65,27 @@ export const postsCount = () => {
   return db.post.count().then((count) => ({ count }))
 }
 
-export const createPost = ({ input }, { context: { currentUser } }) => {
-  requireAuth()
-  validate(input)
+// export const createPost = ({ input }, { context: { currentUser } }) => {
+//   validate(input)
 
-  return db.post.create({ data: input })
-}
+//   return db.post.create({ data: input })
+// }
 
-export const updatePost = ({ id, input }, { context: { currentUser } }) => {
-  requireAuth()
-  validate(input)
+// export const updatePost = ({ id, input }, { context: { currentUser } }) => {
+//   validate(input)
 
-  return db.post.update({ data: input, where: { id: Number(id) } })
-}
+//   return db.post.update({ data: input, where: { id: Number(id) } })
+// }
 
-export const hidePost = ({ id }, { context: { currentUser } }) => {
-  requireAuth()
+// export const hidePost = ({ id }, { context: { currentUser } }) => {
+//   return db.post.update({
+//     data: { postedAt: null },
+//     where: { id: parseInt(id) },
+//   })
+// }
 
-  return db.post.update({
-    data: { postedAt: null },
-    where: { id: parseInt(id) },
-  })
-}
-
-export const deletePost = ({ id }, { context: { currentUser } }) => {
-  requireAuth()
-
-  return db.post.delete({
-    where: { id: Number(id) },
-  })
-}
+// export const deletePost = ({ id }, { context: { currentUser } }) => {
+//   return db.post.delete({
+//     where: { id: Number(id) },
+//   })
+// }

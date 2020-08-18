@@ -32,10 +32,10 @@ export const schema = gql`
     postedAt: DateTime
   }
 
-  type Mutation {
-    createPost(input: PostInput!): Post
-    updatePost(id: ID!, input: PostInput!): Post
-    hidePost(id: ID!): Post
-    deletePost(id: ID!): Post
-  }
+  # type Mutation {
+  #   createPost(input: PostInput!): Post
+  #   updatePost(id: ID!, input: PostInput!): Post
+  #   hidePost(id: ID!): Post
+  #   deletePost(id: ID!): Post
+  # }
 `
