@@ -9,9 +9,8 @@ You can view this app live at https://redwoodjs-example-blog.vercel.app/
 * [Overview](#overview)
 * [Getting Started](#getting-started)
   * [Installation](#installation)
-  * [Deploy to Vercel](#deployment)
-    * [Enabling Image Uploads](#enabling-image-uploads)
-* [Architecture](#architecture)
+  * [Enabling Image Uploads](#enabling-image-uploads)
+* [Deploy to Vercel](#deployment)
 
 ## Overview
 
@@ -55,15 +54,7 @@ Now you should be able to start a development server:
 Assuming everything worked, open a browser to http://localhost:8910 and you should
 be seeing the homepage (similar to the screenshot above).
 
-### Deployment
-
-See the Vercel section of the [Deploy doc](https://redwoodjs.com/docs/deploy).
-
-> **Note**: to deploy on Vercel using this repo, you must set the production deploy branch on Vercel to `vercel-deploy`
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/git?s=https%3A%2F%2Fgithub.com%2Fredwoodjs%2Fexample-blog.git&env=DATABASE_URL)
-
-#### Enabling Image Uploads
+### Enabling Image Uploads
 
 The blog uses an external service, [Filestack](https://filestack.com) to handle image
 uploads. If you want to be able to upload images in local development you'll need to
@@ -81,3 +72,13 @@ new blog post http://localhost:8910/admin/new you should see a filepicker toward
 bottom of the form:
 
 ![New post screenshot](https://user-images.githubusercontent.com/300/67907861-9f3ea780-fb36-11e9-8bca-4e71c38d47e3.png)
+
+# Deployment to Vercel
+
+See the Vercel section of the [Deploy doc](https://redwoodjs.com/docs/deploy).
+
+> **Note**: to deploy on Vercel using this repo, you must set the production deploy branch on Vercel to `vercel-deploy`
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/git?s=https%3A%2F%2Fgithub.com%2Fredwoodjs%2Fexample-blog.git&env=DATABASE_URL)
+
+
